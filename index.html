@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unlimited World - Power Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="fruits.html">Fruits</a> |
+        <a href="pets.html">Pets</a> |
+        <a href="swords.html">Swords</a> |
+        <a href="machines.html">Machines</a> |
+        <a href="relics.html">Relics/Raids</a> |
+        <a href="gamepasses.html">Gamepasses</a>
+    </nav>
+
+    <!-- Orbiting background orbs -->
+    <div class="orb-halo-bg">
+        <div class="orb"></div><div class="orb"></div><div class="orb"></div><div class="orb"></div><div class="orb"></div>
+        <div class="orb"></div><div class="orb"></div><div class="orb"></div><div class="orb"></div><div class="orb"></div>
+    </div>
+
+    <!-- Main calculator box -->
+    <div class="calculator-container">
+        <main class="fade-in">
+            <h1>Power Calculator</h1>
+            <label>Power per Click:</label><br>
+            <input type="number" id="powerPerClick" step="any"><br>
+            <label>Select Fruit:</label><br>
+            <select id="fruitSelect">
+                <option value="Water">Water</option>
+                <option value="Thunder">Thunder</option>
+                <option value="Swordman">Swordman</option>
+                <option value="Wind">Wind</option>
+                <option value="Ice Knight">Ice Knight</option>
+                <option value="Fiery Blood">Fiery Blood</option>
+                <option value="Moon">Moon</option>
+                <option value="Sun">Sun</option>
+                <option value="Easter">Easter</option>
+            </select><br>
+            <label>Desired Power:</label><br>
+            <input type="number" id="desiredPower" step="any"><br>
+            <button onclick="calculate()">Calculate</button>
+            <div id="result"></div>
+        </main>
+    </div>
+
+    <footer>Made by <strong>Riley, Information from Alpi. Calculations from Kujimu </strong></footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

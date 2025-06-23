@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pets - Unlimited World</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        body {
+            background: radial-gradient(circle at center, #2d0040 0%, #0f001c 100%);
+            color: #f3eaff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 0 20px;
+        }
+
+        nav {
+            background-color: #1a0024;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 3px solid #bb65ff;
+            margin-bottom: 40px;
+        }
+
+            nav a {
+                color: #d9aaff;
+                text-decoration: none;
+                margin: 0 12px;
+                font-weight: bold;
+            }
+
+                nav a:hover {
+                    color: #ffffff;
+                }
+
+        h1 {
+            text-align: center;
+            color: #bb65ff;
+            text-shadow: 0 0 12px #cc66ff;
+        }
+
+        section {
+            background-color: rgba(36, 0, 48, 0.8);
+            padding: 25px;
+            margin: 20px auto;
+            border-radius: 12px;
+            box-shadow: 0 0 25px #9327d6;
+            max-width: 800px;
+        }
+
+        h2 {
+            color: #f0c2ff;
+            border-left: 5px solid #943dff;
+            padding-left: 10px;
+            margin-bottom: 15px;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        .ascension-note {
+            font-style: italic;
+            color: #cba6f7;
+            margin-top: 20px;
+        }
+
+        .tooltip {
+            position: relative;
+            cursor: help;
+            border-bottom: 1px dashed #bb65ff;
+        }
+
+            .tooltip:hover::after {
+                content: attr(data-tooltip);
+                position: absolute;
+                left: 0;
+                top: 100%;
+                background: #1a001f;
+                color: #fff;
+                padding: 5px 8px;
+                border-radius: 6px;
+                font-size: 0.75em;
+                white-space: nowrap;
+                margin-top: 4px;
+                box-shadow: 0 0 8px #7700ff;
+                z-index: 10;
+            }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #cdafff;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="fruits.html">Fruits</a> |
+        <a href="pets.html">Pets</a> |
+        <a href="swords.html">Swords</a> |
+        <a href="machines.html">Machines</a> |
+        <a href="relics.html">Relics/Raids</a> |
+        <a href="gamepasses.html">Gamepasses</a>
+    </nav>
+
+    <h1>Pet Tier List & Buffs</h1>
+
+    <section>
+        <h2>🔺 Power Buff Pets</h2>
+        <ul>
+            <li><strong>Naruto Easter</strong> – 300% (event-only)</li>
+            <li><strong>Luffy Easter</strong> – 200% (event-only)</li>
+            <li><strong>Muzan Flame</strong> – 300% (limited-time Flame event)</li>
+            <li><strong>Roger Flame</strong> – 200% <span class="tooltip" data-tooltip="Legendary pets must be leveled up manually.">[Legendary]</span> (limited-time Flame event)</li>
+            <li><strong>Green</strong> – 200% (top 3 in tower)</li>
+            <li><strong>Sakonji</strong> – 150% (floor 50–200 rewards)</li>
+            <li><strong>Nezuko</strong> – 120% (floor 20, 75, 125, 175)</li>
+            <li><strong>Sasuke</strong> – 100% (weekly login)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>🟥 DMG Pets (Top Damage)</h2>
+        <ol>
+            <li>Goku Blue (Map 6)</li>
+            <li>Shanks (Map 1)</li>
+            <li>Other Mythic Pets</li>
+        </ol>
+        <p class="ascension-note">🔁 <strong>Ascension:</strong> Use duplicates + emblems. Max 3 ascensions (7 total of same pet).</p>
+    </section>
+
+    <footer>
+        Made by <strong>Riley, Information from Alpi, Calculations from Kujimu</strong>
+    </footer>
+</body>
+</html>

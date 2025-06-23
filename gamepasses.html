@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gamepasses & Tips - Unlimited World</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: radial-gradient(ellipse at center, #1f002f 0%, #0a0015 100%);
+            color: #efe0ff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background: #220033;
+            padding: 14px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px #45007a;
+        }
+
+            nav a {
+                color: #e6b3ff;
+                margin: 0 15px;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s ease;
+            }
+
+                nav a:hover {
+                    color: #ffffff;
+                }
+
+        header {
+            text-align: center;
+            padding: 40px 20px 20px;
+            color: #ffccff;
+            font-size: 2.3em;
+            text-shadow: 0 0 15px #cc66ff;
+        }
+
+        .content {
+            max-width: 850px;
+            margin: auto;
+            padding: 30px;
+            background: linear-gradient(to bottom, rgba(60, 0, 80, 0.75), rgba(30, 0, 40, 0.85));
+            border-radius: 20px;
+            box-shadow: 0 0 25px #aa66ff;
+        }
+
+        h2 {
+            color: #ffcaff;
+            border-left: 5px solid #cc66ff;
+            padding-left: 12px;
+            margin-top: 30px;
+        }
+
+        ul {
+            list-style-type: square;
+            margin-left: 25px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .tips {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #ff80ff;
+            padding: 15px;
+            margin-top: 25px;
+            border-radius: 10px;
+        }
+
+        .orb-burst {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+            .orb-burst div {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background: radial-gradient(circle, #dd99ff33, transparent 70%);
+                animation: moveAround 12s infinite ease-in-out;
+            }
+
+                .orb-burst div:nth-child(1) {
+                    top: 20%;
+                    left: 10%;
+                    animation-delay: 0s;
+                }
+
+                .orb-burst div:nth-child(2) {
+                    top: 50%;
+                    left: 80%;
+                    animation-delay: 3s;
+                }
+
+                .orb-burst div:nth-child(3) {
+                    top: 75%;
+                    left: 40%;
+                    animation-delay: 6s;
+                }
+
+                .orb-burst div:nth-child(4) {
+                    top: 30%;
+                    left: 60%;
+                    animation-delay: 1.5s;
+                }
+
+        @keyframes moveAround {
+            0%, 100% {
+                transform: translateY(0);
+                opacity: 0.12;
+            }
+
+            50% {
+                transform: translateY(-15px);
+                opacity: 0.25;
+            }
+        }
+
+        footer {
+            text-align: center;
+            color: #cc99ff;
+            margin: 50px 0 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="orb-burst">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="fruits.html">Fruits</a> |
+        <a href="pets.html">Pets</a> |
+        <a href="swords.html">Swords</a> |
+        <a href="machines.html">Machines</a> |
+        <a href="relics.html">Relics/Raids</a> |
+        <a href="gamepasses.html">Gamepasses</a>
+    </nav>
+
+    <header>Gamepasses & Tips</header>
+
+    <div class="content">
+        <h2>Useful Gamepasses</h2>
+        <ul>
+            <li>Auto Click</li>
+            <li>+2 Pet Equip Slots</li>
+            <li>Power +100%</li>
+            <li>VIP (Power +30%, DMG +30%, Gold +30%)</li>
+            <li>Attack Range + Magnet (buy both)</li>
+            <li>Equip Fuse</li>
+            <li>Quick Quirk Roll</li>
+            <li>Fast Open</li>
+            <li>Gold +100%</li>
+        </ul>
+
+        <h2>Known Bugs / Tips</h2>
+        <div class="tips">
+            <ul>
+                <li><strong>Raid Reset Bug:</strong> Finish the raid, leave, and rejoin to avoid timer.</li>
+                <li><strong>Tower Infinite Key Farm:</strong> Secret method exists (gatekept).</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        Made by <strong>Riley, Information from Alpi, Calculations from Kujimu</strong>
+    </footer>
+</body>
+</html>

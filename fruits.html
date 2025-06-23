@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fruits - Unlimited World</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .content-card {
+            background: rgba(24, 0, 36, 0.85);
+            padding: 30px;
+            margin: 50px auto;
+            border-radius: 12px;
+            max-width: 900px;
+            box-shadow: 0 0 30px #a84dff;
+            z-index: 2;
+            position: relative;
+        }
+
+            .content-card h1 {
+                color: #bb65ff;
+                text-shadow: 0 0 10px #c47aff;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+        .fruit-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+            .fruit-table th,
+            .fruit-table td {
+                padding: 12px;
+                border: 1px solid #5a0055;
+                text-align: center;
+                color: #f3eaff;
+            }
+
+            .fruit-table th {
+                background-color: #2a002e;
+                color: #ffccff;
+            }
+
+            .fruit-table tr:nth-child(even) {
+                background-color: rgba(74, 0, 86, 0.3);
+            }
+
+        /* Glow Orb Background */
+        .orb-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .orb {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(circle, #d87eff, #1f0028);
+            border-radius: 50%;
+            box-shadow: 0 0 25px #e97aff, 0 0 60px #b84dff;
+            animation: floatOrb 20s linear infinite;
+        }
+
+        @keyframes floatOrb {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+            }
+        }
+
+        footer {
+            text-align: center;
+            margin: 60px 0 20px;
+            color: #cdafff;
+            font-size: 0.9em;
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="fruits.html">Fruits</a> |
+        <a href="pets.html">Pets</a> |
+        <a href="swords.html">Swords</a> |
+        <a href="machines.html">Machines</a> |
+        <a href="relics.html">Relics/Raids</a> |
+        <a href="gamepasses.html">Gamepasses</a>
+    </nav>
+
+    <div class="content-card">
+        <h1>🍇 Fruit List & Swing Speeds</h1>
+        <table class="fruit-table">
+            <tr>
+                <th>Fruit</th>
+                <th>Rarity</th>
+                <th>Swing Speed</th>
+                <th>Notes</th>
+            </tr>
+            <!-- Inside your <table class="fruit-table"> ... -->
+
+            <tr><td>Water</td><td>Common</td><td>9.85/s</td><td>Starter fruit</td></tr>
+            <tr><td>Thunder</td><td>Common</td><td>7.42/s</td><td>Basic fruit</td></tr>
+            <tr><td>Swordman</td><td>Rare</td><td>10.54/s</td><td>Decent upgrade</td></tr>
+            <tr><td>Wind</td><td>Rare</td><td>8.41/s</td><td>Decent Upgrade</td></tr>
+            <tr><td>Ice Knight</td><td>Epic</td><td>14.24/s</td><td>Very efficient for power</td></tr>
+            <tr><td>Fiery Blood</td><td>Legend</td><td>11.18/s</td><td>Very powerful</td></tr>
+            <tr><td>Moon</td><td>Mythic</td><td>14.13/s</td><td>Top-tier for damage</td></tr>
+            <tr><td>Sun</td><td>Mythic</td><td>11.18/s</td><td>Costs 19,999 Robux!</td></tr>
+            <tr><td>Easter</td><td>Mythic</td><td>14.13/s</td><td>Event-only</td></tr>
+
+            <!-- 🔥 New Flame Event Fruits -->
+            <tr><td>Sonic</td><td>Epic</td><td>??</td><td>Flame Event – Same as Ice Knight<br><em>Swing speed not confirmed</em></td></tr>
+            <tr><td>Rock</td><td>Mythic</td><td>??</td><td>Flame Event – Same Damage as Sun</td></tr>
+
+
+        </table>
+    </div>
+
+    <!-- Glowing Orbs Background -->
+    <div class="orb-container">
+        <div class="orb" style="top: 80%; left: 10%; animation-delay: 0s;"></div>
+        <div class="orb" style="top: 90%; left: 30%; animation-delay: 3s;"></div>
+        <div class="orb" style="top: 85%; left: 50%; animation-delay: 5s;"></div>
+        <div class="orb" style="top: 95%; left: 70%; animation-delay: 2s;"></div>
+        <div class="orb" style="top: 88%; left: 90%; animation-delay: 4s;"></div>
+    </div>
+
+    <footer>
+        Made by <strong>Riley, Information from Alpi, Calculations from Kujimu</strong>
+    </footer>
+</body>
+</html>

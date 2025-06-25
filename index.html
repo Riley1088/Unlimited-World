@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <title>Unlimited World - Power Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <nav>
-        <a href="index.html">Home</a> |
-        <a href="fruits.html">Fruits</a> |
-        <a href="pets.html">Pets</a> |
-        <a href="swords.html">Swords</a> |
-        <a href="machines.html">Machines</a> |
-        <a href="relics.html">Relics/Raids</a> |
-        <a href="gamepasses.html">Gamepasses</a>
-        <button id="darkToggle">🌙</button>
+        <div class="nav-left">
+            <a href="index.html">Home</a> |
+            <a href="fruits.html">Fruits</a> |
+            <a href="pets.html">Pets</a> |
+            <a href="swords.html">Swords</a> |
+            <a href="machines.html">Machines</a> |
+            <a href="relics.html">Relics/Raids</a> |
+            <a href="gamepasses.html">Gamepasses</a>
+        </div>
+        <div class="nav-right">
+            <button id="themeToggle">🌙</button>
+        </div>
     </nav>
 
     <!-- Orbiting background orbs -->
@@ -24,21 +27,20 @@
         <div class="orb"></div><div class="orb"></div><div class="orb"></div><div class="orb"></div><div class="orb"></div>
     </div>
 
-    <!-- Main calculator box -->
     <div class="calculator-container">
         <main class="fade-in">
             <h1>Power Calculator</h1>
 
-            <label for="powerPerClick">Power per Click:</label><br>
-            <input type="number" id="powerPerClick" step="any"><br><br>
+            <label for="powerPerClick">Power per Click:</label>
+            <input type="number" id="powerPerClick" step="any">
 
-            <label for="currentPower">Current Power:</label><br>
-            <input type="number" id="currentPower" step="any"><br><br>
+            <label for="currentPower">Current Power:</label>
+            <input type="number" id="currentPower" step="any">
 
-            <label for="desiredPower">Desired Power:</label><br>
-            <input type="number" id="desiredPower" step="any"><br><br>
+            <label for="desiredPower">Desired Power:</label>
+            <input type="number" id="desiredPower" step="any">
 
-            <label for="fruitSelect">Select Fruit:</label><br>
+            <label for="fruitSelect">Select Fruit:</label>
             <select id="fruitSelect">
                 <option value="Water">Water</option>
                 <option value="Thunder">Thunder</option>
@@ -51,15 +53,34 @@
                 <option value="Easter">Easter</option>
                 <option value="Sonic">Sonic</option>
                 <option value="Rock">Rock</option>
-            </select><br><br>
+            </select>
 
             <button onclick="calculate()">Calculate</button>
             <div id="result" style="margin-top: 20px;"></div>
         </main>
     </div>
 
-    <footer>Made by <strong>Riley</strong>, Information from Alpi, Calculations from Kujimu</footer>
+    <footer>Made by <strong>Riley</strong>, Info from Alpi, Calc from Kujimu</footer>
 
     <script src="script.js"></script>
+    <script>
+        // Dark mode toggle
+        document.getElementById('themeToggle').addEventListener('click', () => {
+            const html = document.documentElement;
+            if (html.getAttribute('data-theme') === 'light') {
+                html.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                html.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Keep theme on reload
+        window.addEventListener('DOMContentLoaded', () => {
+            const saved = localStorage.getItem('theme');
+            if (saved) document.documentElement.setAttribute('data-theme', saved);
+        });
+    </script>
 </body>
 </html>

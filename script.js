@@ -41,20 +41,7 @@ function calculate() {
     `;
 }
 
-// === Dark Mode Toggle + Save ===
-const toggleButton = document.getElementById('darkToggle');
-if (toggleButton) {
-    toggleButton.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        const isDark = document.body.classList.contains('dark-mode');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    });
-}
-
-// === Load Saved Theme on Page Load ===
-window.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        document.body.classList.add('dark-mode');
-    }
+// Dark mode toggle
+document.getElementById('darkToggle').addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
 });

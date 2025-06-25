@@ -1,4 +1,6 @@
-/* === Base Light Mode === */
+Styles:
+
+/* Base light mode */
 body {
     background: linear-gradient(135deg, #f4e9ff, #e0cfff, #f7eaff);
     color: #1a0024;
@@ -9,7 +11,6 @@ body {
     transition: background 0.5s, color 0.5s;
 }
 
-/* === Navigation === */
 nav {
     background-color: #f2d9ff;
     padding: 10px 15px;
@@ -29,24 +30,16 @@ nav a:hover {
     color: #000;
 }
 
-/* === Dark Mode Toggle Button === */
 #darkToggle {
-    position: absolute;
-    top: 15px;
-    right: 15px;
+    margin-left: 20px;
     background: none;
     border: none;
-    font-size: 1.3em;
-    cursor: pointer;
     color: #6a1a99;
-    z-index: 99;
+    font-size: 1.2em;
+    cursor: pointer;
 }
 
-body.dark-mode #darkToggle {
-    color: #d9aaff;
-}
-
-/* === Calculator Container === */
+/* Calculator */
 .calculator-container {
     display: flex;
     justify-content: center;
@@ -98,7 +91,7 @@ footer {
     font-size: 0.9em;
 }
 
-/* === Orbiting Halo Orbs === */
+/* Orb glow setup */
 .orb-halo-bg {
     position: absolute;
     top: 45%;
@@ -121,7 +114,7 @@ footer {
     animation: glowPulse 1.8s ease-in-out infinite alternate;
 }
 
-/* Orb Positions */
+/* Orb positions */
 .orb:nth-child(1) { top: 0%; left: 50%; }
 .orb:nth-child(2) { top: 15%; left: 85%; }
 .orb:nth-child(3) { top: 50%; left: 100%; }
@@ -143,7 +136,7 @@ footer {
     100% { transform: scale(1.2); }
 }
 
-/* === Dark Mode Overrides === */
+/* === DARK MODE OVERRIDES === */
 body.dark-mode {
     background: linear-gradient(135deg, #100018, #2c003a, #180020);
     color: #f3eaff;
@@ -154,7 +147,8 @@ body.dark-mode nav {
     border-bottom: 3px solid #bb65ff;
 }
 
-body.dark-mode nav a {
+body.dark-mode nav a,
+body.dark-mode #darkToggle {
     color: #d9aaff;
 }
 

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,36 +16,35 @@
             position: relative;
         }
 
-            .content-card h1 {
-                color: #bb65ff;
-                text-shadow: 0 0 10px #c47aff;
-                text-align: center;
-                margin-bottom: 30px;
-            }
+        .content-card h1 {
+            color: #bb65ff;
+            text-shadow: 0 0 10px #c47aff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
         .fruit-table {
             width: 100%;
             border-collapse: collapse;
         }
 
-            .fruit-table th,
-            .fruit-table td {
-                padding: 12px;
-                border: 1px solid #5a0055;
-                text-align: center;
-                color: #f3eaff;
-            }
+        .fruit-table th,
+        .fruit-table td {
+            padding: 12px;
+            border: 1px solid #5a0055;
+            text-align: center;
+            color: #f3eaff;
+        }
 
-            .fruit-table th {
-                background-color: #2a002e;
-                color: #ffccff;
-            }
+        .fruit-table th {
+            background-color: #2a002e;
+            color: #ffccff;
+        }
 
-            .fruit-table tr:nth-child(even) {
-                background-color: rgba(74, 0, 86, 0.3);
-            }
+        .fruit-table tr:nth-child(even) {
+            background-color: rgba(74, 0, 86, 0.3);
+        }
 
-        /* Glow Orb Background */
         .orb-container {
             position: fixed;
             top: 0;
@@ -71,7 +70,6 @@
             0% {
                 transform: translateY(0) rotate(0deg);
             }
-
             100% {
                 transform: translateY(-100vh) rotate(360deg);
             }
@@ -85,17 +83,48 @@
             position: relative;
             z-index: 2;
         }
+
+        /* Dark mode override */
+        body.dark-mode .fruit-table th {
+            background-color: #12001a;
+        }
+
+        /* Toggle Button Style */
+        .nav-right {
+            float: right;
+            margin-top: -40px;
+            margin-right: 20px;
+        }
+
+        #darkToggle {
+            background: #370045;
+            color: #fff;
+            border: none;
+            padding: 8px 14px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        #darkToggle:hover {
+            background: #59006d;
+        }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a> |
-        <a href="fruits.html">Fruits</a> |
-        <a href="pets.html">Pets</a> |
-        <a href="swords.html">Swords</a> |
-        <a href="machines.html">Machines</a> |
-        <a href="relics.html">Relics/Raids</a> |
-        <a href="gamepasses.html">Gamepasses</a>
+        <div class="nav-left">
+            <a href="index.html">Home</a> |
+            <a href="fruits.html">Fruits</a> |
+            <a href="pets.html">Pets</a> |
+            <a href="swords.html">Swords</a> |
+            <a href="machines.html">Machines</a> |
+            <a href="relics.html">Relics/Raids</a> |
+            <a href="gamepasses.html">Gamepasses</a>
+        </div>
+        <div class="nav-right">
+            <button id="darkToggle">🌙</button>
+        </div>
     </nav>
 
     <div class="content-card">
@@ -107,8 +136,6 @@
                 <th>Swing Speed</th>
                 <th>Notes</th>
             </tr>
-            <!-- Inside your <table class="fruit-table"> ... -->
-
             <tr><td>Water</td><td>Common</td><td>9.85/s</td><td>Starter fruit</td></tr>
             <tr><td>Thunder</td><td>Common</td><td>7.42/s</td><td>Basic fruit</td></tr>
             <tr><td>Swordman</td><td>Rare</td><td>10.54/s</td><td>Decent upgrade</td></tr>
@@ -118,16 +145,11 @@
             <tr><td>Moon</td><td>Mythic</td><td>14.13/s</td><td>Top-tier for damage</td></tr>
             <tr><td>Sun</td><td>Mythic</td><td>11.18/s</td><td>Costs 19,999 Robux!</td></tr>
             <tr><td>Easter</td><td>Mythic</td><td>14.13/s</td><td>Event-only</td></tr>
-
-            <!-- 🔥 New Flame Event Fruits -->
-            <tr><td>Sonic</td><td>Epic</td><td>??</td><td>Flame Event – Same as Ice Knight<br><em>Swing speed not confirmed</em></td></tr>
-            <tr><td>Rock</td><td>Mythic</td><td>??</td><td>Flame Event – Same Damage as Sun</td></tr>
-
-
+            <tr><td>Sonic</td><td>Event</td><td>14.24/s?</td><td>Same damage as Ice, speed unknown</td></tr>
+            <tr><td>Rock</td><td>Event</td><td>11.18/s?</td><td>Same damage as Sun, speed unknown</td></tr>
         </table>
     </div>
 
-    <!-- Glowing Orbs Background -->
     <div class="orb-container">
         <div class="orb" style="top: 80%; left: 10%; animation-delay: 0s;"></div>
         <div class="orb" style="top: 90%; left: 30%; animation-delay: 3s;"></div>
@@ -137,7 +159,20 @@
     </div>
 
     <footer>
-        Made by <strong>Riley, Information from Alpi, Calculations from Kujimu</strong>
+        Made by <strong>Riley</strong>
     </footer>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+        });
+
+        document.getElementById('darkToggle').addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+        });
+    </script>
 </body>
 </html>

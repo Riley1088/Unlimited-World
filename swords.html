@@ -1,63 +1,65 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Swords & Forge - Unlimited World</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <title>Swords - Unlimited World</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            background: radial-gradient(circle at center, #220033 0%, #0d001a 100%);
-            color: #f6e9ff;
+            background: radial-gradient(circle at center, #200028 0%, #090013 100%);
+            color: #f3eaff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
             padding: 0 20px;
         }
 
         nav {
-            background-color: #160021;
+            background-color: #1a0024;
             padding: 15px;
             text-align: center;
             border-bottom: 3px solid #bb65ff;
+            position: relative;
             margin-bottom: 40px;
         }
 
-            nav a {
-                color: #dfafff;
-                text-decoration: none;
-                margin: 0 10px;
-                font-weight: bold;
-            }
+        nav a {
+            color: #d9aaff;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
 
-                nav a:hover {
-                    color: #ffffff;
-                }
+        nav a:hover {
+            color: #ffffff;
+        }
 
         h1 {
             text-align: center;
-            color: #ce7aff;
-            text-shadow: 0 0 12px #a24aff;
+            color: #bb65ff;
+            text-shadow: 0 0 12px #cc66ff;
         }
 
-        .section {
-            background-color: rgba(36, 0, 48, 0.85);
+        section {
+            background-color: rgba(36, 0, 48, 0.8);
             padding: 25px;
-            margin: 30px auto;
+            margin: 20px auto;
             border-radius: 12px;
             box-shadow: 0 0 25px #9327d6;
-            max-width: 850px;
+            max-width: 800px;
         }
 
         h2 {
             color: #f0c2ff;
-            border-left: 5px solid #a347ff;
-            padding-left: 12px;
-            margin-bottom: 16px;
+            border-left: 5px solid #943dff;
+            padding-left: 10px;
+            margin-bottom: 15px;
         }
 
-        ul, p {
+        ul {
             padding-left: 20px;
-            line-height: 1.7;
+        }
+
+        li {
+            margin: 8px 0;
         }
 
         footer {
@@ -65,50 +67,86 @@
             text-align: center;
             color: #cdafff;
             font-size: 0.9em;
-            padding-bottom: 20px;
+        }
+
+        /* Dark Mode Support */
+        body.dark-mode section {
+            background-color: rgba(20, 0, 28, 0.9);
+        }
+
+        /* Dark mode toggle */
+        .nav-right {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        #darkToggle {
+            background: #370045;
+            color: #fff;
+            border: none;
+            padding: 8px 14px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        #darkToggle:hover {
+            background: #59006d;
         }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a> |
-        <a href="fruits.html">Fruits</a> |
-        <a href="pets.html">Pets</a> |
-        <a href="swords.html">Swords</a> |
-        <a href="machines.html">Machines</a> |
-        <a href="relics.html">Relics/Raids</a> |
-        <a href="gamepasses.html">Gamepasses</a>
+        <div class="nav-left">
+            <a href="index.html">Home</a> |
+            <a href="fruits.html">Fruits</a> |
+            <a href="pets.html">Pets</a> |
+            <a href="swords.html">Swords</a> |
+            <a href="machines.html">Machines</a> |
+            <a href="relics.html">Relics/Raids</a> |
+            <a href="gamepasses.html">Gamepasses</a>
+        </div>
+        <div class="nav-right">
+            <button id="darkToggle">🌙</button>
+        </div>
     </nav>
 
-    <h1>Swords & Forge</h1>
+    <h1>🗡️ Sword Rankings & Tips</h1>
 
-    <div class="section">
-        <h2>🗨 How to Obtain Swords</h2>
+    <section>
+        <h2>Top Tier Swords</h2>
         <ul>
-            <li>Pumpkin chest in each world</li>
-            <li>Quests (Worlds 1–5)</li>
-            <li>Raids</li>
+            <li><strong>Yamato X</strong> – Raid Drop (Impossible difficulty)</li>
+            <li><strong>Dragon’s Soul</strong> – Premium Gem Sword (Mythic)</li>
+            <li><strong>Blood Edge</strong> – Tower Reward</li>
         </ul>
-    </div>
+    </section>
 
-    <div class="section">
-        <h2>⚒ Sword Fusion</h2>
-        <p>
-            Each tier requires 3 swords from the previous tier:<br />
-            <strong>Normal → Shine → Godly → Mystery</strong>
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>🔥 Forge (Map 2)</h2>
-        <p>
-            Use <strong>Souls</strong> to upgrade your sword's multiplier for Power Per Swing.<br />
-            Souls drop from <em>Superbosses</em> and <em>Tower Map 2</em>.
-        </p>
-    </div>
+    <section>
+        <h2>Tips</h2>
+        <ul>
+            <li>Upgrade swords with tower rewards (Halos).</li>
+            <li>Keep multiple mythics for fusing/ascending.</li>
+            <li>Combine with relics and pets for best effect.</li>
+        </ul>
+    </section>
 
     <footer>
-        Made by <strong>Riley, Information from Alpi, Calculations from Kujima</strong>
+        Made by <strong>Riley</strong>
     </footer>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+        });
+
+        document.getElementById('darkToggle').addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+        });
+    </script>
 </body>
 </html>

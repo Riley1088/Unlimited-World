@@ -1,186 +1,162 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Gamepasses & Tips - Unlimited World</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            background: radial-gradient(ellipse at center, #1f002f 0%, #0a0015 100%);
-            color: #efe0ff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <title>Gamepasses - Unlimited World</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      background: #0b0015;
+      color: #f3eaff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-        nav {
-            background: #220033;
-            padding: 14px 0;
-            text-align: center;
-            box-shadow: 0 4px 10px #45007a;
-        }
+    nav {
+      background-color: #1a0024;
+      padding: 15px;
+      text-align: center;
+      border-bottom: 3px solid #bb65ff;
+      position: relative;
+    }
 
-            nav a {
-                color: #e6b3ff;
-                margin: 0 15px;
-                text-decoration: none;
-                font-weight: bold;
-                transition: color 0.3s ease;
-            }
+    nav a {
+      color: #d9aaff;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
 
-                nav a:hover {
-                    color: #ffffff;
-                }
+    nav a:hover {
+      color: #ffffff;
+    }
 
-        header {
-            text-align: center;
-            padding: 40px 20px 20px;
-            color: #ffccff;
-            font-size: 2.3em;
-            text-shadow: 0 0 15px #cc66ff;
-        }
+    .nav-right {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+    }
 
-        .content {
-            max-width: 850px;
-            margin: auto;
-            padding: 30px;
-            background: linear-gradient(to bottom, rgba(60, 0, 80, 0.75), rgba(30, 0, 40, 0.85));
-            border-radius: 20px;
-            box-shadow: 0 0 25px #aa66ff;
-        }
+    #darkToggle {
+      background: #370045;
+      color: #fff;
+      border: none;
+      padding: 8px 14px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 6px;
+    }
 
-        h2 {
-            color: #ffcaff;
-            border-left: 5px solid #cc66ff;
-            padding-left: 12px;
-            margin-top: 30px;
-        }
+    #darkToggle:hover {
+      background: #59006d;
+    }
 
-        ul {
-            list-style-type: square;
-            margin-left: 25px;
-        }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #ffccff;
+      text-shadow: 0 0 12px #c47aff;
+    }
 
-        li {
-            margin-bottom: 10px;
-        }
+    .content {
+      max-width: 850px;
+      margin: 40px auto;
+      background: rgba(60, 0, 80, 0.75);
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 0 30px #a74fff;
+    }
 
-        .tips {
-            background: rgba(255, 255, 255, 0.05);
-            border-left: 4px solid #ff80ff;
-            padding: 15px;
-            margin-top: 25px;
-            border-radius: 10px;
-        }
+    h2 {
+      color: #ffcaff;
+      border-bottom: 2px solid #cc66ff;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
 
-        .orb-burst {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-        }
+    ul {
+      padding-left: 20px;
+    }
 
-            .orb-burst div {
-                position: absolute;
-                width: 100px;
-                height: 100px;
-                border-radius: 50%;
-                background: radial-gradient(circle, #dd99ff33, transparent 70%);
-                animation: moveAround 12s infinite ease-in-out;
-            }
+    li {
+      margin-bottom: 10px;
+    }
 
-                .orb-burst div:nth-child(1) {
-                    top: 20%;
-                    left: 10%;
-                    animation-delay: 0s;
-                }
+    footer {
+      text-align: center;
+      margin: 50px 0 20px;
+      color: #cdafff;
+      font-size: 0.9em;
+    }
 
-                .orb-burst div:nth-child(2) {
-                    top: 50%;
-                    left: 80%;
-                    animation-delay: 3s;
-                }
+    /* Dark mode toggle */
+    body.dark-mode {
+      background: #00000a;
+    }
 
-                .orb-burst div:nth-child(3) {
-                    top: 75%;
-                    left: 40%;
-                    animation-delay: 6s;
-                }
-
-                .orb-burst div:nth-child(4) {
-                    top: 30%;
-                    left: 60%;
-                    animation-delay: 1.5s;
-                }
-
-        @keyframes moveAround {
-            0%, 100% {
-                transform: translateY(0);
-                opacity: 0.12;
-            }
-
-            50% {
-                transform: translateY(-15px);
-                opacity: 0.25;
-            }
-        }
-
-        footer {
-            text-align: center;
-            color: #cc99ff;
-            margin: 50px 0 20px;
-            font-size: 0.9em;
-        }
-    </style>
+    body.dark-mode .content {
+      background-color: rgba(20, 0, 30, 0.85);
+      box-shadow: 0 0 30px #862fff;
+    }
+  </style>
 </head>
 <body>
-    <div class="orb-burst">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+
+  <nav>
+    <div class="nav-left">
+      <a href="index.html">Home</a> |
+      <a href="fruits.html">Fruits</a> |
+      <a href="pets.html">Pets</a> |
+      <a href="swords.html">Swords</a> |
+      <a href="machines.html">Machines</a> |
+      <a href="relics.html">Relics/Raids</a> |
+      <a href="gamepasses.html">Gamepasses</a>
     </div>
-
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="fruits.html">Fruits</a> |
-        <a href="pets.html">Pets</a> |
-        <a href="swords.html">Swords</a> |
-        <a href="machines.html">Machines</a> |
-        <a href="relics.html">Relics/Raids</a> |
-        <a href="gamepasses.html">Gamepasses</a>
-    </nav>
-
-    <header>Gamepasses & Tips</header>
-
-    <div class="content">
-        <h2>Useful Gamepasses</h2>
-        <ul>
-            <li>Auto Click</li>
-            <li>+2 Pet Equip Slots</li>
-            <li>Power +100%</li>
-            <li>VIP (Power +30%, DMG +30%, Gold +30%)</li>
-            <li>Attack Range + Magnet (buy both)</li>
-            <li>Equip Fuse</li>
-            <li>Quick Quirk Roll</li>
-            <li>Fast Open</li>
-            <li>Gold +100%</li>
-        </ul>
-
-        <h2>Known Bugs / Tips</h2>
-        <div class="tips">
-            <ul>
-                <li><strong>Raid Reset Bug:</strong> Finish the raid, leave, and rejoin to avoid timer.</li>
-                <li><strong>Tower Infinite Key Farm:</strong> Secret method exists (gatekept).</li>
-            </ul>
-        </div>
+    <div class="nav-right">
+      <button id="darkToggle">🌙</button>
     </div>
+  </nav>
 
-    <footer>
-        Made by <strong>Riley, Information from Alpi, Calculations from Kujimu</strong>
-    </footer>
+  <h1>Gamepasses</h1>
+
+  <div class="content">
+    <h2>Power Boost Passes</h2>
+    <ul>
+      <li><strong>+50% Power:</strong> Boosts every click.</li>
+      <li><strong>+50% Speed:</strong> Increases swing speed significantly.</li>
+      <li><strong>+50% Critical:</strong> Helps with raid and tower damage scaling.</li>
+    </ul>
+
+    <h2>Utility Passes</h2>
+    <ul>
+      <li><strong>VIP:</strong> Extra rewards from raid/tower + crown badge.</li>
+      <li><strong>2x Tower Rewards:</strong> More halos and gems weekly.</li>
+      <li><strong>2x Relic Drop:</strong> Increase chance for sets quickly.</li>
+      <li><strong>Auto Ascend:</strong> Automates pet promotion.</li>
+    </ul>
+
+    <h2>Other Limited Passes</h2>
+    <ul>
+      <li><strong>Event Passes:</strong> Flame Event & Easter had unique boosts.</li>
+    </ul>
+  </div>
+
+  <footer>
+    Made by <strong>Riley</strong>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+      }
+    });
+
+    document.getElementById('darkToggle').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    });
+  </script>
+
 </body>
 </html>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -19,18 +19,19 @@
             text-align: center;
             border-bottom: 3px solid #bb65ff;
             margin-bottom: 40px;
+            position: relative;
         }
 
-            nav a {
-                color: #d9aaff;
-                text-decoration: none;
-                margin: 0 12px;
-                font-weight: bold;
-            }
+        nav a {
+            color: #d9aaff;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
 
-                nav a:hover {
-                    color: #ffffff;
-                }
+        nav a:hover {
+            color: #ffffff;
+        }
 
         h1 {
             text-align: center;
@@ -68,48 +69,57 @@
             margin-top: 20px;
         }
 
-        .tooltip {
-            position: relative;
-            cursor: help;
-            border-bottom: 1px dashed #bb65ff;
-        }
-
-            .tooltip:hover::after {
-                content: attr(data-tooltip);
-                position: absolute;
-                left: 0;
-                top: 100%;
-                background: #1a001f;
-                color: #fff;
-                padding: 5px 8px;
-                border-radius: 6px;
-                font-size: 0.75em;
-                white-space: nowrap;
-                margin-top: 4px;
-                box-shadow: 0 0 8px #7700ff;
-                z-index: 10;
-            }
-
         footer {
             margin-top: 50px;
             text-align: center;
             color: #cdafff;
             font-size: 0.9em;
         }
+
+        /* Dark Mode Overrides */
+        body.dark-mode section {
+            background-color: rgba(20, 0, 28, 0.9);
+        }
+
+        /* Toggle Button */
+        .nav-right {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        #darkToggle {
+            background: #370045;
+            color: #fff;
+            border: none;
+            padding: 8px 14px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        #darkToggle:hover {
+            background: #59006d;
+        }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a> |
-        <a href="fruits.html">Fruits</a> |
-        <a href="pets.html">Pets</a> |
-        <a href="swords.html">Swords</a> |
-        <a href="machines.html">Machines</a> |
-        <a href="relics.html">Relics/Raids</a> |
-        <a href="gamepasses.html">Gamepasses</a>
+        <div class="nav-left">
+            <a href="index.html">Home</a> |
+            <a href="fruits.html">Fruits</a> |
+            <a href="pets.html">Pets</a> |
+            <a href="swords.html">Swords</a> |
+            <a href="machines.html">Machines</a> |
+            <a href="relics.html">Relics/Raids</a> |
+            <a href="gamepasses.html">Gamepasses</a>
+        </div>
+        <div class="nav-right">
+            <button id="darkToggle">🌙</button>
+        </div>
     </nav>
 
-    <h1>Pet Tier List & Buffs</h1>
+    <h1> Pet Tier List & Buffs</h1>
 
     <section>
         <h2>🔺 Power Buff Pets</h2>
@@ -117,7 +127,7 @@
             <li><strong>Naruto Easter</strong> – 300% (event-only)</li>
             <li><strong>Luffy Easter</strong> – 200% (event-only)</li>
             <li><strong>Muzan Flame</strong> – 300% (limited-time Flame event)</li>
-            <li><strong>Roger Flame</strong> – 200% <span class="tooltip" data-tooltip="Legendary pets must be leveled up manually.">[Legendary]</span> (limited-time Flame event)</li>
+            <li><strong>Roger Flame</strong> – 200% (limited-time Flame event, <em>Legendary</em> — must be leveled manually)</li>
             <li><strong>Green</strong> – 200% (top 3 in tower)</li>
             <li><strong>Sakonji</strong> – 150% (floor 50–200 rewards)</li>
             <li><strong>Nezuko</strong> – 120% (floor 20, 75, 125, 175)</li>
@@ -136,7 +146,20 @@
     </section>
 
     <footer>
-        Made by <strong>Riley, Information from Alpi, Calculations from Kujimu</strong>
+        Made by <strong>Riley</strong>
     </footer>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+        });
+
+        document.getElementById('darkToggle').addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+        });
+    </script>
 </body>
 </html>

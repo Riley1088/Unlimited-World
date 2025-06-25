@@ -18,7 +18,6 @@ function calculate() {
     const goal = parseFloat(document.getElementById('desiredPower').value);
     const fruit = document.getElementById('fruitSelect').value;
     const speed = fruitSwingSpeeds[fruit];
-
     const resultEl = document.getElementById('result');
 
     if (isNaN(ppc) || isNaN(current) || isNaN(goal) || ppc <= 0 || goal <= 0 || current < 0 || current >= goal) {
@@ -41,3 +40,8 @@ function calculate() {
         🖱️ <strong>Total Clicks:</strong> ${totalClicks.toLocaleString()}
     `;
 }
+
+// Dark mode toggle
+document.getElementById('darkToggle').addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});

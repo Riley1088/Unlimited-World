@@ -174,3 +174,27 @@ body.dark-mode .orb {
     background: radial-gradient(circle, #7ab6ff, #1a0030);
     box-shadow: 0 0 20px #7ab6ff, 0 0 40px #3e7cff;
 }
+/* Dark Mode Styles */
+.dark-mode {
+    background: linear-gradient(135deg, #100018, #2c003a, #180020);
+    color: #f3eaff;
+}
+
+.dark-mode main {
+    background-color: rgba(24, 0, 36, 0.8);
+    box-shadow: 0 0 25px #c069ff;
+}
+
+.dark-mode nav {
+    background-color: #1a0024;
+    border-bottom: 3px solid #bb65ff;
+}
+
+.dark-mode input, 
+.dark-mode select, 
+.dark-mode button {
+    background-color: #290030;
+    color: #e3ccff;
+    border: 1px solid #943dff;
+}
+
